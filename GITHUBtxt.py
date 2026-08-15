@@ -18,8 +18,8 @@ print("-" * 30)
 print("BOTTOM 3 IPs:")
 for ip in my_ips[-3:]:
     print(f"  > {ip}")
-
-
+    
+#-----------------------------------------------------------------------------------------------------------------------------#
 # --- STEP 2: CHECK API CONNECTIVITY ---
 import requests
 
@@ -50,7 +50,7 @@ def test_api():
 
 api_works = test_api()
 
-
+#-----------------------------------------------------------------------------------------------------------------------------#
 # --- STEP 3: GET TO KNOW API DATA (VARIABLE)---
 
 import requests
@@ -68,6 +68,7 @@ response = requests.get(url, headers=headers, params=params)
 import pprint
 pprint.pprint(response.json())
 
+#-----------------------------------------------------------------------------------------------------------------------------#
 # --- STEP 4: FETCH AND STORE ---
 import sys
 import requests  # Must be imported
@@ -124,8 +125,7 @@ if api_works:
 else:
     print("❌ Error: api_works is False. Check your API key or connection.")
 
-
-
+#-----------------------------------------------------------------------------------------------------------------------------#
 # --- STEP 5: PRINT OUT THE API DATA (VARIABLE) AND ADJUST ACCORDING TO COLUMN. DOWNLOAD FILE.XLSX ---
 
 import pandas as pd
